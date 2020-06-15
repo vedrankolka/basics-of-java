@@ -1,0 +1,6 @@
+﻿version 1.0.0
+Ovako se otvara tag: \{$
+Ovako se zatvara tag $}
+Slijedi jedna for petlja od 0 do 9 jer kad nešto kao ide do 10 ide do 9 jelte, u programiranju se, naime
+počinje brojati od 0.
+{$ for i in range 10 $} i={$= i*i+4.00$} {$end$}

@@ -1,0 +1,147 @@
+Recenzija 1
+Pozdrav :)
+
+Uživancija je bilo ispravljanje ove zadaće, stvaro sve čito na mjestu, organizirano, puno testova, tako
+da je ovo što se toga tiče stvarno za pet osim par sitinica koje sam naveo u tekstu dolje, a koje su po meni ono što dijeli
+pet od četiri -> lambde, provjera null-a, konstante
+Dakle 4.
+
+dakle krenimo!,
+što se tiče prvog zadatka u principu je sve vrlo dobro i na mjestu, 
+ne može se čovjek požaliti, no evo izdvojit ću par stvari koje su mi ovako ostale u sjećanju:
+- za addAll u kolekcijama si mogao (radi čitljivosti i što je fancy) umjesto
+anonimnog razreda staviti labda izraz, kao i na još par mjesta u kolekcijama
+gdje je takva konverzija moguća
+- ostalo ti je na par mjeta čini mi se nešto s konzultacija, pa eto šta ja znam
+nije baš za pohvalu :)
+- neke stvari se mogao s konstantama riješiti npr. ovaj -1 kao VALUE_NOT_FOUND il nešto slično
+- " 		first = null;
+		last = null; ", ovo može i " first = last = null", mislim nepotrebno al ono
+ po meni istpo neke lijepe sitnice, fancy jel :)
+- metoda checkIndex() ima gotovu implemntaciju u razredu Objects, nisi to moro pisat samo 
+mjesto zauzima nepotrebno
+- Tester nije parametriziran, što je na neki način minimalni uvjet u prvom zadatku pa je ovo
+ajmo reći velika greška
+
+-"public ArrayIndexedCollection(Collection<T> other) {
+		this(other, DEFAULT_CAPACITY);
+	}" znači da bi stvaralo drugu kolekciju s kapacitetom 16 kad god druga kolkecija bude size < 16,
+ no gledo sam drugu zadaću i ne piše da je ovo tražena funkcionalnost,
+ ako ti u konstrukutor pošalješ koleckiju s manjim kapacitetom od 16 ne znači da ona treba imati capacity 16
+
+Svaka čast na količini testova i količini logike koju pokrivaju, ovo stvarno za mene je
+nešto ismpresivno jer mi je osobno to pisanje testova najgori dio zadaće, tako da sam
+provlačeći kroz tvoje testove svoj kod čak otkrio jedan problem u svojim kolekcijama :)
+
+Drugi zadatak,
+opet predivno formatirano, dobar Javadoc, odlični testovi, dakle forma kodiranja u svakom slučaju 10/10.
+Ista stvar je i s funkcionlanostima.
+Jedina stvar koju sam vidio i kad sam palio i uspoređivao testove, recimo ti kada get()-u daš null kažeš da
+bi isprano ponašanje bilo ako bi ti on nazad vratio null(" assertNull(d.get(null) ") mislim da to nije dobro, zato što nigje ne piše
+u zadaći a i nema logike, ako su null vrijednosti zabranjene, onda on nikako ne može vraćati null tj. ne može vraćati ništa jer
+u zadaći stoji " Ključ pri tome ne smije biti null; vrijednost smije.", dakle po meni je jedino ispravno tu bilo bacati NullPointerException
+tj raditi na početku get metode provejru => Objects.requireNonNull(key, "A key must not be a null value!")
+ 
+Treći zadatak, nemaš provjeru da x i y mogu biti null, što s obzirom da nemaš settere mislim da se implicitno podrazumijeva
+da mora biti dano u konstruktoru, jer ti nemaš u ostalim metodama provjeru nulla, tako da  ako ga propustiš u konstruktoru on će 
+padati za svaku daljnnju metodu.
+Također uspoređivnaje realnih brojeva se ne radi ovako s equals nego s precisionom (ovo govorim za testove),
+jer vidim da jesi to napravio u razredu, ali dalje mogao si to kao konstantu staviti pa bi ti bilo i lkaše mijenjeat i imao
+bi to na jednom mjestu.
+
+Treći sve radi, sve zadovoljava tako još jednom sve pohvale.
+
+Sretno u nastavku vještine! :)
+
+Recenzija 2
+Ocjena 1 jer tester nije paramteriziran, a to se traži u minimalnih uvjetima.
+
+Z1
+minimalni uvjeti:NISU ZADOVOLJENI
+->iz minimalnih uvjeta: "ali nužno je da svi navedeni razredi/sučelja budu definirani kao parametrizirani" - Tester nije parametriziran
+
+Z2
+minimalni uvjeti:zadovoljeni
+-sve ok
+
+Z3
+minimalni uvjeti:zadovoljeni
+-> 10E-6 stavi u varijablu da ako se to želi promjeniti da se ne mora tražiti po cijelom kodu gdje se sve pojavilo, a i želimo izbjegavati magic numbers
+
+Z4
+minimalni uvjeti:zadovoljeni
+-> sve ok
+-> kod realokacija tablice:
+iz upute:"Naime, poznato je da tablice
+raspršenog adresiranja nude povoljne računske kompleksnosti samo ako nisu prepunjene (odnosno ako
+nema previše preljeva). Stoga pratite u kodu kada popunjenost tablice postane jednaka ili veća od 75% broja
+slotova, i u tom trenutku povećajte kapacitet tablice na dvostruki."
+--> npr. tablica je veličine 4, i kada bi se popunila 3 *slota* bi trebao alocirati novu, nedostaje ti jedna varijabla s kojom bi kontrolirao broj ispunjenosti *slotova*. kod tebe se gleda ukupni broj zapisa u slotovima i ulančanoj listi (varijabla size) što je pogrešno.
+-> sb.append(entry.toString() + " "); , bolje/brže je  sb.append(entry.toString()).append(" ");
+
+Recenzija 3
+Pozdrav, recenzirati ću zadatak po zadatak te na kraju dati opće mišljenje i ocjenu.
+
+ZADATAK 1.
+Procesor je parametriziran. List je parametriziran no gdje je dokumentacija? :D .  ElementsGetter je parametriziran. Collection je parametriziran. ArrayIndexedCollection (AIC) je parametriziran. LinkedListIndexedCollection (LLIC) je parametriziran. No zašto Tester nije parametriziran? 
+U sučelju Collection mislim da bi metoda addAll bila bolja sa parametrima addAll(Collection<? extends T> other) , a metoda addAllSatisfying,   addAllSatisfying(Collection<? extends T> collection, Tester<? super T> tester).
+U AIC, konstruktrori koji primaju kolekciju u argumentu ona bi trebla biti parametrizirana sa Collection<? extends T>, jer mogu pohraniti i sve elemente razreda koji nasljeđuju T. Isto tako i za konstruktore LLIC.
+
+Nažalost, za prvi zadatak nije zadovoljen minimalni uvjet koji kaže:
+
+"1. zadatak: Razredi i sučelja navedeni u uputi 1. zadatka su definirani kao parametrizirani. Ako parametrizacija nekih od metoda u njima nije napravljena korektno, to komentirajte, ali nužno je da SVI  NAVEDENI RAZREDI/SUČELJA BUDU DEFINIRANI KAO PARAMETRIZIRANI, te da, primjerice, kompajler na temelju te parametrizacije ne dopusti dodavanje stringa u kolekciju Integera."
+
+Sučelje Tester nije parametrizirano što povlači neispunjavanje minimalnih uvjeta.
+
+ZADATAK 2.
+Razred Dictionary je parametriziran i sadrži sve zadane metode. Metode put i get su ispravno i jednostavno implementirane. Također testovi su napravljeni za sve metode.
+Ovaj zadatak zadovoljava sve propisane minimalne uvjete.
+
+
+ZADATAK 3.
+Sve zadane metode implementirane. Postoje testovi te oni prolaze.
+Vektor (3,3) rotacijom za PI daje vektor (-3,-3) što zadovoljava minimalan uvjet. 
+
+ZADATAK 4.
+Sve metode su na broju. Metode su jasno i kratko izvedene. Sviđa mi se kako si napravio onaj uvjet da kapacitet mora biti prva veća potencija broja 2. Imam samo jednu primjedbu. U zadatku 4b piše: 
+
+"Modificirajte prethodno razvijenu kolekciju tako da prati popunjenost. Naime, poznato je da tablice
+raspršenog adresiranja nude povoljne računske kompleksnosti samo ako nisu prepunjene (odnosno ako
+nema previše preljeva).Stoga pratite u kodu kada popunjenost tablice postane jednaka ili veća od 75% broja
+slotova, i u tom trenutku povećajte kapacitet tablice na dvostruki."
+
+Ti si to protumačio tako da si gledao da broj elemenata u tablici ne premaši 75% broja slotova. Zar ne bi imalo više smisla kada bi napravio rehash tablice kad broj ZAUZETIH SLOTOVA tablice premaši 75% broja slotova?
+
+Zadatak ispunjava minimalne uvjete
+
+ZAKLJUČAK: Zadaća je vrlo dobra (što bi i bila ocjena) samo da ima parametriziran Tester. Na žalost ovako ću morati dati 1 kako bi se prvi zadatak ispravio.
+
+MOJE KOERKCIJE:
+Pozdrav ekipa, iz nekog razloga treba i vaše recenzije kopirati u ovo (ako sam dobro shvatio sa slajdova).
+
+U prvom zadatku sam parametrizirao Tester i promijenio parametrizacije mnogih metoda/konstruktora s <T>
+na <? extends T> i za Tester gdje se koristi iz <T> u <? super T> te sam dodao dokumentaciju za List.
+Također sam dodao lambda izraz u addAll jer je puno čitljivije. 
+
+U drugom nisam mijenjao ništa, iako sam dobio komentar da bi za get(null) trebalo baciti iznimku, ali
+vodio sam se uputom za 4. zadatak gdje piše da je legalno pitati za key null, jer se taj ključ ne sadrži,
+a ako ključ nije sadržan da metoda vraća null.
+
+U trećem sam konstantu 10e-6 za uspoređivanje stavio kao statičku konstantu.
+Drugi komentar je bio da ne provjeravam jesu li x i y null,
+međutim x i y su double-ovi primitvnog tipa i u njih se null ne može spremiti tako da tu nema promjena.
+
+U četvrtom zadatku sam promijenio metodu toString tako da umjesto sb.append(entry.toString() + " ") piše
+sb.append(entry.toString()).append(' ');
+Komentirali ste da krivo brojim popunjenost tablice, ali kako nije dio minimalnog uvjeta to nisam promijenio
+zato što je sam profesor rekao da se to zapravo radi tako da se prati popunjenost sa size, što meni ima više smisla
+pa sam tako isprve i implementirao. Da objasnim zašto to mislim : imate situaciju gdje je popunjenost slotova
+oko pola i recimo da dobar dio vaših novih zapisa (tipa pola novih zapisa jer je takva popunjenost da je pola
+slotova slobodno, pola zauzeto)
+završava u već popunjenim slotovima. Već tada narušavate performanse vaše tablice a tko zna kada ćete dostići
+75% popunjenosti slotova, ne mora se to toliko puno povećavati ako vam se slučajno baš tako dodaju zapisi da
+idu u preljev (u teoriji se može dogoditi i da se uopće ne dođe do 75% popunjenosti). Ako popunjenost
+pratite sa size, u nekom trenutku ćete sigurno povećati tablicu pa će vjerojatno neki zapisi koji bi se inače
+dodali u zauzeti slot sada (zbog drukčijeg modula) dodati u neki od novih slotova te ne narušavati performanse.
+Dakle sa size stvari ne ostavljate slučaju nego ste sigurni ako dodate dovoljno zapisa da će se tablica povećati,
+a tada je puno veća vjerojatnost da će raspršenje biti bolje.

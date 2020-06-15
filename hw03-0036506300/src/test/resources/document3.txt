@@ -1,0 +1,11 @@
+﻿{$ = "Leonora \"mala\" princeza, takozvana \"Leonarda\"" + "\"Vidoviti\" Vedran Kolka"$}
+{$FOR ever brate moji$}
+	{$For barem par mjeseci realno$}
+		{$ for i in range 4 $}
+			{$ = "jer bar 4 bratko! hehe" $}
+			Bolje da ovo niko ne vidi jer fkt previse pricam o njoj a nismo ni zajedno
+			sto je malo tuzno ne, sam nemoj ovo uploadat\\objavit negdje, kuzis ovo prije je
+			kao slash kao uploadat "odnosno" objavit jelti.
+		{$end$}
+	{$END$}
+{$ENd$}

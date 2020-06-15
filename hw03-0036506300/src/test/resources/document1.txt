@@ -1,0 +1,6 @@
+﻿This is a simple text test.
+{$ for i in range 5$}
+	Do something1.
+	{$= i + 5 * @sin 2/3 * pi$}
+	Do something2.
+{$end$}

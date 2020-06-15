@@ -1,0 +1,315 @@
+
+
+
+
+
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    	<title>
+			
+				Pitanja i odgovori: Osnove programskog jezika Java
+			
+			 - Ferko
+		</title>
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		
+		<link rel="stylesheet" href="/ferko/css/style.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/ferko/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" />
+		<script type="text/javascript" src="/ferko/js/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="/ferko/js/jquery-ui-1.7.2.custom.min.js"></script>
+		<script type="text/javascript" src="/ferko/js/ferko-custom-tabview.js"></script>
+		
+	</head>
+	<body>
+		<div class="mainWrapper">
+		
+
+
+
+<div id="header" class="container">
+	<div class="logo"><a href="/ferko/Main.action">FER</a></div>
+
+	<div id="infoBox" style="text-align:right;">
+	
+		<span>Vedran Kolka</span> 
+		  <a href="/ferko/User!find.action?bean.id=9664">Postavke</a> |
+		<a href="/ferko/Logout.action">Odjava</a>
+	
+	
+		<div id="searchBox">
+			<form action=".">
+			<p><input type="text" name="search" /></p>
+			</form>
+		</div>
+	</div>
+
+	<ul class="mainNav">
+    
+      
+        
+<li>
+<a href="/ferko/Main!execute.action">Početna</a>
+</li>
+        
+      
+        
+<li>
+<a href="/ferko/ForumIndex!execute.action">Forum</a>
+</li>
+        
+      
+        
+<li>
+<a href="/ferko/SimpleCalendar!execute.action">Kalendar</a>
+</li>
+        
+      
+        
+<li>
+<a href="/ferko/NewsChannels!execute.action">Obavijesti</a>
+</li>
+        
+      
+        
+<li>
+<a href="/ferko/EPortfolio!execute.action">e-portfolio</a>
+</li>
+        
+      
+        
+<li>
+<a href="/ferko/Mentorships!execute.action">Mentorstva</a>
+</li>
+        
+      
+    
+	</ul>
+</div>
+
+
+
+
+
+
+<ul class="subNav">
+
+    
+
+      
+        
+<li style="float: right;">2018/2019 - ljetni</li>
+        
+      
+        
+<li>
+
+
+<a href="/ferko/ShowCourse.action?courseInstanceID=2018L%2F38047">Stranica kolegija</a>
+</li>
+        
+      
+        
+<li>
+
+
+<a href="/ferko/ShowCourseEvents.action?courseInstanceID=2018L%2F38047">Kalendar</a>
+</li>
+        
+      
+        
+<li>
+
+
+<a href="/ferko/Repository.action?courseInstanceID=2018L%2F38047">Repozitorij</a>
+</li>
+        
+      
+        
+<li>
+
+
+<a href="/ferko/CourseCategory.action?courseInstanceID=2018L%2F38047">Forum</a>
+</li>
+        
+      
+        
+<li>
+
+
+<a href="/ferko/QAA.action?courseInstanceID=2018L%2F38047">Pitanja i odgovori</a>
+</li>
+        
+      
+    
+
+</ul>
+
+
+<ul class="subsubNav">
+
+    
+      
+        
+<li>
+
+
+<a href="/ferko/ShowCourse.action?courseInstanceID=2018L%2F38047">Osnove programskog jezika Java</a>
+</li>
+        
+      
+        
+<li>
+
+
+<a href="/ferko/QAA.action?courseInstanceID=2018L%2F38047">Pitanja i odgovori</a>
+</li>
+        
+      
+        
+<li>Novo pitanje</li>
+        
+      
+    
+
+</ul>
+
+
+		
+
+
+
+<div id="body" class="container courseBody">
+		
+
+
+
+
+<h1>Postavljanje novog pitanja</h1>
+
+<form id="QAAQuestionEdit" action="/ferko/QAAQuestionEdit.action" method="post"
+ class="cmxform"
+>
+<fieldset>
+<ol>
+
+	<li>
+<label 
+	 for="QAAQuestionEdit_data_questionBean_title" >Naslov</label>
+<input type="text" name="data.questionBean.title" size="50" value="" id="QAAQuestionEdit_data_questionBean_title"/>
+</li>
+
+	<li class="fieldComment">Unesite kratak i jasan naslov iz kojeg se može zaključiti o čemu je pitanje.</li>
+	<li>
+<label 
+	 for="QAAQuestionEdit_data_questionBean_questionText" >Pitanje</label>
+<textarea name="data.questionBean.questionText" cols="100" rows="15" id="QAAQuestionEdit_data_questionBean_questionText"></textarea>
+</li>
+
+	<li class="fieldComment">Unesite tekst pitanja. Više o sintaksi: <a target="_jcms_help" href="/ferko/Help.action?helpKey=000050" onclick="blur();"><img src="img/icons/help.png"></a>.</li>
+	
+<li>
+<label 
+	 for="QAAQuestionEdit_data_questionBean_category">Kategorija</label>
+<select name="data.questionBean.category" size="1" id="QAAQuestionEdit_data_questionBean_category">
+    <option value=""></option>
+    <option value="111">01. domaća zadaća</option>
+    <option value="112">02. domaća zadaća</option>
+    <option value="113">03. domaća zadaća</option>
+    <option value="114">04. domaća zadaća</option>
+    <option value="115">05. domaća zadaća</option>
+    <option value="116">06. domaća zadaća</option>
+    <option value="117">07. domaća zadaća</option>
+    <option value="118">08. domaća zadaća</option>
+    <option value="119">09. domaća zadaća</option>
+    <option value="120">10. domaća zadaća</option>
+    <option value="121">11. domaća zadaća</option>
+    <option value="122">12. domaća zadaća</option>
+    <option value="123">13. domaća zadaća</option>
+    <option value="124">14. domaća zadaća</option>
+    <option value="125">15. domaća zadaća</option>
+    <option value="126">16. domaća zadaća</option>
+    <option value="127">17. domaća zadaća</option>
+    <option value="128">18. domaća zadaća</option>
+
+
+</select>
+</li>
+
+	<li class="fieldComment">Odaberite kategoriju u koju pripada ovo pitanje.</li>
+	
+<li>
+<label 
+	 for="QAAQuestionEdit_data_questionBean_tags">Oznake</label>
+<select name="data.questionBean.tags" size="10" id="QAAQuestionEdit_data_questionBean_tags" multiple="multiple">
+    <option value="68">eclipse</option>
+    <option value="69">iznimke</option>
+    <option value="70">javadoc</option>
+    <option value="71">maven</option>
+    <option value="72">pokretanje</option>
+    <option value="73">prevođenje</option>
+    <option value="74">razredi</option>
+    <option value="75">sučelja</option>
+
+
+</select>
+</li>
+
+	<li class="fieldComment">Odaberite oznake koje opisuju ovo pitanje.</li>
+	<li class="formHidden">
+<input type="hidden" name="data.questionBean.id" value="" id="QAAQuestionEdit_data_questionBean_id"/>
+</li>
+
+	<li class="formHidden">
+<input type="hidden" name="data.questionBean.questionTextFormat" value="0" id="QAAQuestionEdit_data_questionBean_questionTextFormat"/>
+</li>
+
+	<li class="formHidden">
+<input type="hidden" name="courseInstanceID" value="2018L/38047" id="QAAQuestionEdit_courseInstanceID"/>
+</li>
+
+	<li class="formSubmit">
+<input type="submit" id="QAAQuestionEdit__saveq" name="method:saveq" value="Ažuriraj"/>
+</li>
+
+</ol>
+</fieldset>
+</form>
+
+
+
+
+
+<hr class="hidden"/>
+
+</div>
+
+		<div class="push">&nbsp;</div>
+		</div>
+		
+
+<tiles:insertAttribute name="footer2"/>
+<div id="footer" class="container">
+<p> <a href="/ferko/About.action">O Ferku</a> | <a href="/ferko/Tutorials.action">Upute za korištenje Ferka</a> | 
+    <a href="http://www.fer.unizg.hr/">Fakultet elektrotehnike i računarstva</a>
+	<br/>
+	Odabir jezika: 
+	<a href="/ferko/Main.action?request_locale=en">English</a>, 
+	<a href="/ferko/Main.action?request_locale=hr">Hrvatski</a>
+</p>
+</div>
+
+                <script type="text/javascript">
+                   var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+                   document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+                </script>
+                <script type="text/javascript">
+                   var pageTracker = _gat._getTracker("UA-5503250-1");
+                   pageTracker._trackPageview();
+                </script>
+
+	</body>	
+</html>

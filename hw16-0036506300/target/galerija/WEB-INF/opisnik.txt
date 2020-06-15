@@ -1,0 +1,60 @@
+dubrovnik1.jpg
+Tvrđava
+Dubrovnik, more, tvrđava, grad
+dubrovnik2.jpg
+Dubrovačke zidine
+Dubrovnik, zidine, more, grad
+dubrovnik3.jpg
+Plaža Banje
+Dubrovnik, plaža, ljeto
+dubrovnik4.jpg
+Stradun
+Dubrovnik, Stradun, grad
+dubrovnik5.jpg
+Dubrovačka luka
+Dubrovnik, luka, brod
+split1.jpg
+Split
+Split, more, grad
+split2.jpg
+Splitska riva
+Split, riva, palme, grad
+split3.jpg
+Splitska luka
+Split, luka, brodovi, grad
+split4.jpg
+Sveti Duje
+Split, katedrala, grad
+split5.jpg
+Dioklecijanova palača
+Split, palača, Dioklecijan
+zadar1.jpg
+Valovi
+Zadar, more, sunce, valovi
+zadar2.jpg
+Morske orgulje --- ovaj će se lupit glavom ^
+Zadar, more, orgulje, valovi
+zadar3.jpg
+Bura
+Zadar, bura, valovi
+zadar4.jpg
+Pozdrav Suncu
+Zadar, Sunce, more
+zadar5.jpg
+Orgulje i Pozdrav Suncu
+Zadar, more, orgulje, Sunce
+zagreb1.jpg
+Zagrebačka katedrala
+Zagreb, katedrala, Kaptol, grad
+zagreb2.jpg
+Crkva Sv. Marka
+Zagreb, crkva, Gradec, grad
+zagreb3.jpg
+Trg bana Josipa Jelačića
+Zagreb, trg, tramvaj, grad
+zagreb4.jpg
+Arena Zagreb
+Zagreb, arena, sport
+zagreb5.jpg
+Mirogoj
+Zagreb, groblje, arkade, grad

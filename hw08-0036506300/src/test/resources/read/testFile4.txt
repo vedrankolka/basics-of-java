@@ -1,0 +1,2 @@
+A coby of this document should be in directory src/test/resources/write if the copying is done correctly
+The name should be testFile4

@@ -1,0 +1,8 @@
+domaće zadaće
+vrijeme u satima
+1,8  2,18  3,31  4,14  5,20  6,19  7,12 8,20 9,26 10,22  
+0
+32
+2
+
+podaci su izmišljeni
